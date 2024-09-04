@@ -8,7 +8,7 @@ from app.model.base import Base
 # 게시판 테이블
 class Board(Base):
     __tablename__ = 'board'
-    __table_args__ = {'sqlite_autoincrement': True}
+    # __table_args__ = {'sqlite_autoincrement': True}
 
     bno: Mapped[int] = mapped_column(primary_key=True, autoincrement=True, index=True)
     title: Mapped[str] = mapped_column(index=True)
